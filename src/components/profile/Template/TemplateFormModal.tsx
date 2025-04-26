@@ -245,8 +245,9 @@ export const TemplateFormModal: React.FC<TemplateFormModalProps> = ({
                 ref={fileInputRef}
                 type="file"
                 accept="image/*"
-                onChange={handleImageChange}
+                capture="environment"
                 className="hidden"
+                onChange={handleImageChange}
               />
             </div>
           </div>

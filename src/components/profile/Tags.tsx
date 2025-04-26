@@ -139,7 +139,15 @@ export const Tags: React.FC<TagsProps> = ({ title, tags, editable = true, onUpda
               />
               <button
                 className="bg-[#6B047C] text-white px-2 py-1 rounded ml-2 md:ml-1 text-sm md:text-base lg:text-lg"
-                onClick={handleAdd}
+                type="button"
+                onClick={() => {
+                  handleAdd();
+                  setTimeout(() => {
+                    const inputEl = document.activeElement as HTMLElement;
+                    if (inputEl && inputEl.tagName === 'INPUT') inputEl.blur();
+                  }, 0);
+                }}
+                disabled={!input.trim() || tagList.includes(input.trim())}
               >
                 Add
               </button>

@@ -214,8 +214,9 @@ export const SoftwareFormModal: React.FC<SoftwareFormModalProps> = ({
                 ref={fileInputRef}
                 type="file"
                 accept="image/*"
-                onChange={handleImageChange}
+                capture="environment"
                 className="hidden"
+                onChange={handleImageChange}
                 required={!formData.imageUrl}
               />
             </div>

@@ -203,8 +203,9 @@ export const BookFormModal: React.FC<BookFormModalProps> = ({
                 ref={fileInputRef}
                 type="file"
                 accept="image/*"
-                onChange={handleImageChange}
+                capture="environment"
                 className="hidden"
+                onChange={handleImageChange}
                 required={!formData.imageUrl}
               />
             </div>
