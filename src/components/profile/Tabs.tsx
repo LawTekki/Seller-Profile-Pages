@@ -1,27 +1,53 @@
 import React from "react";
 
+interface TabsProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
+
 const tabs = ["About", "Experience", "Products", "Events", "Reviews"];
 
-export const Tabs = () => {
-  const [activeTab, setActiveTab] = React.useState("About");
-
+export const Tabs: React.FC<TabsProps> = ({ activeTab, setActiveTab }) => {
   return (
-    <div className="relative flex items-center gap-[40px_96px] text-xl text-[#808080] font-medium whitespace-nowrap tracking-[-0.4px] leading-[1.3] px-3.5 max-md:max-w-full">
-      {tabs.map((tab) => (
-        <div
-          key={tab}
-          className={`self-stretch z-0 gap-2 my-auto p-2 cursor-pointer ${
-            activeTab === tab ? "text-[#6B047C]" : ""
-          }`}
-          onClick={() => setActiveTab(tab)}
-        >
-          {tab}
-        </div>
-      ))}
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/6d6775384ccd46a982a7cf80d05dc013/09ea237dc136eb5d7625d122330b3334d9aaee6c?placeholderIfAbsent=true"
-        className="object-contain w-[897px] absolute z-0 min-w-60 bottom-[-3px] -translate-x-2/4 translate-y-[0%] h-0 rounded-[0px_0px_0px_0px] left-2/4 max-md:max-w-full"
-      />
+    <div
+      className="
+        flex
+        w-full
+        max-w-[1000px]
+        mx-auto
+        mt-[-8px] sm:mt-6
+        mb-1 sm:mb-2
+        border-b border-[#E6E6E6]
+        text-xs sm:text-base md:text-lg
+        font-semibold
+        tracking-tight
+        text-[#808080]
+        gap-2 sm:gap-4
+        px-2 sm:px-6
+      "
+    >
+      {tabs.map((tab) => {
+        const isActive = activeTab === tab;
+        return (
+          <button
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            className={`
+              flex-1
+              text-center
+              whitespace-nowrap
+              py-2 sm:py-2 md:py-3
+              ${isActive
+                ? "text-[#6B047C] border-b-[5px] border-[#6B047C] rounded-t-lg"
+                : "text-[#B9B9B9]"}
+              transition-colors duration-150
+              focus:outline-none
+            `}
+          >
+            {tab}
+          </button>
+        );
+      })}
     </div>
   );
 };

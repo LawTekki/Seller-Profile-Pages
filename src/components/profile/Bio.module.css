@@ -1,0 +1,65 @@
+.bioCenter {
+  width: 100%;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.bioText {
+  color: #1A011E;
+  font-size: 1.01rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  font-family: 'Inter', Arial, sans-serif;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  white-space: pre-line;
+}
+
+@media (min-width: 701px) {
+  .bioCenter {
+    left: 57px;
+    position: relative;
+    width: 100%;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+    top: -20px;
+    box-sizing: border-box;
+  }
+  .bioText {
+    font-size: 1.09rem;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .bioCenter {
+    max-width: 97vw;
+    left: 0;
+    top: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .bioText {
+    font-size: 1.03rem;
+    line-height: 1.53;
+  }
+}
+
+@media (max-width: 700px) {
+  .bioCenter {
+    max-width: 100vw;
+    padding-left: 12px;
+    padding-right: 12px;
+    left: 0;
+    top: 0;
+  }
+  .bioText {
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+}

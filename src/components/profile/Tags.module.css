@@ -1,0 +1,158 @@
+.tagsCenter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: relative;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 701px) {
+  .tagsCenter {
+    justify-content: flex-start;
+    left: 57px;
+    position: relative;
+    width: 100%;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    top: 25px;
+  }
+}
+
+.tagsRowWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.tagsLabel {
+  color: #808080;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.09rem;
+  margin-right: 90px;
+  margin-top: 8px;
+  min-width: 130px;
+  height: 100%;
+}
+
+.tagsListWrap {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem 0;
+  justify-content: center;
+}
+
+.tagPill {
+  background: #6B047C;
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.3rem;
+  font-size: 1rem;
+  min-height: 42px;
+  height: 42px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .tagsCenter {
+    max-width: 97vw;
+    left: 0;
+    top: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .tagsRowWrap {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .tagsLabel {
+    font-size: 1rem;
+    margin-right: 40px;
+    min-width: 90px;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .tagsCenter {
+    max-width: 100vw;
+    left: 0;
+    top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .tagsRowWrap {
+    flex-direction: column;
+    margin-top: 1rem;
+    align-items: stretch;
+  }
+  .tagsLabel {
+    font-size: 0.98rem;
+    margin-right: 0;
+    margin-bottom: 6px;
+    min-width: 0;
+    height: auto;
+  }
+  .tagsListWrap {
+    gap: 0.2rem 0;
+    justify-content: flex-start;
+  }
+  .tagPill {
+    font-size: 0.95rem;
+    padding: 0.2rem 0.8rem;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tagsCenter {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .tagsLabel {
+    font-size: 0.92rem;
+  }
+  .tagPill {
+    font-size: 0.89rem;
+    padding: 0.15rem 0.6rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .tagsRowWrap {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 1.2rem;
+  }
+  .tagsLabel {
+    margin-right: 0;
+    margin-bottom: 8px;
+    min-width: 0;
+    font-size: 1rem;
+  }
+  .tagPill {
+    font-size: 0.92rem;
+    min-height: 36px;
+    height: 36px;
+    padding: 0.36rem 1rem;
+  }
+}

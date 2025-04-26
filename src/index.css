@@ -98,4 +98,11 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .single-line-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
 }
